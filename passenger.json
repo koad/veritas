@@ -3,5 +3,8 @@
   "name": "Veritas",
   "role": "quality assurance",
   "avatar": "avatar.png",
-  "buttons": []
+  "buttons": [
+    { "label": "Review Queue", "action": "inbox", "description": "Items awaiting review" },
+    { "label": "Verify", "action": "verify", "description": "Start a verification session" }
+  ]
 }

@@ -6,61 +6,52 @@ subject: ~/.faber/posts/2026-04-10-show-hn-agent-home-directory.md
 issue: koad/veritas#14
 faber-issue: koad/faber#9
 source-brief: ~/.iris/positioning/2026-04-04-gitagent-differentiation.md
-verdict: HOLD
+verdict: CONFIRMED
 ---
 
 # Review: Show HN — Agent Home Directory
 
-**Verdict: HOLD — 2 corrections required**
+**Verdict: CONFIRMED — approved for publication**
+
+Re-review 2026-04-04 following Faber corrections (koad/faber commit f34d6cd).
 
 ---
 
-## Findings
+## Re-review: Flagged Items
 
-### 1. gitagent star count — FLAGGED
+### Flag 1 — gitagent star count
 
-Post claims 2,511. Iris brief (2026-04-04) also states 2,511.
+**RESOLVED — CONFIRMED**
 
-GitHub API as of 2026-04-04: **2,518**. Post publishes 2026-04-10 — count will have moved further.
+Post now reads: `"That's earned 2,500+ stars"` (line 15).
 
-Exact number will be demonstrably stale on a high-visibility post where readers can check in one click.
-
-**Correction:** Use `2,500+` or update on publish morning.
+Exact figure removed. `2,500+` is accurate as of 2026-04-04 (live count: 2,518) and will remain accurate through the 2026-04-10 publish date. Credibility risk on HN eliminated.
 
 ---
 
-### 2. Key management claims — CONFIRMED (with note)
+### Flag 2 — Trust bond chain topology
 
-Four keypairs (Ed25519, ECDSA, RSA, DSA) confirmed on disk across iris and rufus entity directories.
+**RESOLVED — CONFIRMED**
 
-Phrasing "You cannot copy a private key without knowing it" is technically defensible but ambiguous — conflates copying with using. Matches Iris brief verbatim; flagged upstream to Iris for future sharpening. Not blocking.
+Post now reads: `"The topology is hub-and-spoke from Juno: koad → juno → iris (brand), koad → juno → rufus (production). Rufus bonds directly to Juno, not through Iris."` (line 31).
 
----
-
-### 3. Trust bond chain `koad → juno → iris → rufus` — FLAGGED
-
-**Factual error.** No `iris → rufus` bond exists in the live system.
-
-Bonds verified:
-- `koad → juno` — CONFIRMED (`~/.juno/trust/bonds/koad-to-juno.md.asc`)
-- `juno → iris` — CONFIRMED, type: peer (`~/.iris/trust/bonds/juno-to-iris.md.asc`)
-- `juno → rufus` — CONFIRMED, type: peer, signed by Juno directly (`~/.rufus/trust/bonds/juno-to-rufus.md.asc`)
-
-Actual topology: hub-and-spoke from Juno, not linear chain through Iris.
-
-**Correction:** Replace example with accurate chain (stop at `koad → juno → iris`) or reframe to reflect actual topology.
+This matches the live system exactly. The false implication of an iris→rufus bond has been removed. Faber has also made the correction explicit ("Rufus bonds directly to Juno, not through Iris") — this will satisfy any technical reader who checks the repo.
 
 ---
 
-### 4. Tone vs. Iris brief — CONFIRMED
+## Original Confirmed Items — No Change Required
 
-All Iris guidance followed: gitagent treated sympathetically, no "incomplete" framing, portability acknowledged before sovereignty distinction drawn, one-sentence frame used verbatim.
+### Key management claims — CONFIRMED
 
----
+Four keypairs on disk verified. Phrasing note from original review (upstream to Iris) — not a Faber correction item, no change expected here.
 
-### 5. Iris-owned phrases — CONFIRMED
+### Tone vs. Iris brief — CONFIRMED
 
-All three present:
+Post continues to hold the line: sympathetic framing of gitagent, no "incomplete" characterization, portability acknowledged before sovereignty distinction.
+
+### Iris-owned phrases — CONFIRMED
+
+All three present and unchanged:
 - "Entities, not configurations" ✓ (line 37)
 - "Cryptographic identity, not prompt identity" ✓ (line 29)
 - "Your entity's history is its governance" ✓ (line 33)
@@ -69,6 +60,6 @@ All three present:
 
 ## Disposition
 
-HOLD. Routing back to Faber for two corrections. Re-review on resubmission.
+CONFIRMED. Both flags resolved. No new issues identified. Approved for publication on 2026-04-10.
 
-Comment filed: koad/veritas#14
+koad/veritas#14 closed.

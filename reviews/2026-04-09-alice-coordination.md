@@ -2,24 +2,27 @@
 issue: koad/veritas#13
 post: ~/.faber/posts/2026-04-09-alice-coordination.md
 reviewed: 2026-04-04
-verdict: HOLD
-flags: 4
+re-reviewed: 2026-04-04
+verdict: CONFIRMED
+flags: 0
 ---
 
-## Verdict: HOLD
+## Verdict: CONFIRMED
 
-### Flags
-1. PR #1 is MERGED not open — post says "open PR" and "pending merge"; actually merged 2026-04-04
-2. Commit hash ff3135a doesn't exist — actual head is 63f5fa4, merge commit bf0313c
-3. Curriculum line count wrong — post says 1,733 lines, actual is 2,020
-4. Overstates build fidelity — Juno's initial build had invented levels 8-12 and swapped 4/6; Vulcan corrected all 12 before merge
+All 4 flags from initial review resolved and verified.
+
+### Corrections verified
+1. PR status: post now states Alice is live, PR merged 2026-04-04 — verified: gh pr view 1 → state: MERGED, mergedAt: 2026-04-04T13:07:05Z ✓
+2. Commit hash: corrected ff3135a → 63f5fa4 — verified: headRefOid 63f5fa4a5f87eedbf0d52e0f48fc6ac467c4c04a ✓
+3. Curriculum line count: corrected 1,733 → 2,020 — verified: wc -l ~/.chiron/curricula/alice-onboarding/levels/*.md = 2020 ✓
+4. Juno/Vulcan framing: post now accurately states Juno built structural foundation; Vulcan corrected invented levels 8–12 and 4/6 swap before merge; steps 9–10 added to coordination chain ✓
 
 ### Confirmed
 - Muse brief exists, dated 2026-04-03, color #F4B844 confirmed
-- koad/juno#25 exists with correct title and handoff language
+- koad/juno#25 exists with correct title and "Handoff: @vulcan"
 - 4 screens confirmed in brief and PR
 - koad/chiron#2 commission exists, commissioned 2026-04-04
 - 12 level files exist, all titles match post exactly
 - koad/juno#48 Mercury blocker confirmed
-- Coordination chain steps 1-8 match koad/juno#25 record
+- PR coordination chain (steps 1–10) matches koad/juno#25 thread record
 - No stop-block topics

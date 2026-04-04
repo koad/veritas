@@ -2,22 +2,25 @@
 issue: koad/veritas#11
 post: ~/.faber/posts/2026-04-06-trust-bonds.md
 reviewed: 2026-04-04
-verdict: HOLD
-flags: 4
+re-reviewed: 2026-04-04
+verdict: CONFIRMED
+flags: 0
 ---
 
-## Verdict: HOLD
+## Verdict: CONFIRMED
 
-### Flags
-1. File count wrong: post says 30, actual is 32 (koad-to-juno.md + .asc not counted)
-2. Entity list wrong: "Juno" listed but no juno-to-juno bond; Chiron missing
-3. "[10 more entities]" should be "[11 more entities]" (15 - 4 = 11)
-4. "Yesterday" footer link points to Apr 4 from an Apr 6 post — 2 days prior, not 1
+All 4 flags from initial review resolved and verified.
+
+### Corrections verified
+1. File count: corrected to 32 (16 .md + 16 .asc) — verified against ~/.juno/trust/bonds/
+2. Entity list: Juno removed, Chiron added — 15 juno-issued entities now accurate
+3. Trust tree: "[10 more entities]" → "[11 more entities]" — 15 − 4 shown = 11 ✓
+4. Footer: "Yesterday" → "April 4" — no longer implies consecutive daily sequence ✓
 
 ### Confirmed
 - koad-to-juno.md content matches post verbatim
 - juno-to-faber.md scope matches post excerpt
-- GPG fingerprint matches bond file
+- GPG fingerprint A07F 8CFE CBF6 B982 EEDA C4F3 62D5 C486 6C24 7E00 confirmed
 - Signing date 2026-04-02 confirmed
 - File location and naming convention confirmed
 - No stop-block topics

@@ -1,23 +1,18 @@
 #!/usr/bin/env bash
 set -euo pipefail
-# Veritas — interactive or prompt-driven
-# Usage: veritas                              → interactive Claude Code session
-#        PROMPT="fact-check this" veritas     → non-interactive, identity + prompt
-#        echo "fact-check this" | veritas     → non-interactive, stdin
-
-IDENTITY="$HOME/.veritas/memories/001-identity.md"
+# veritas — lives on wonderland (10.10.10.10)
+ENTITY_HOST="10.10.10.10"
+ENTITY_DIR="\$HOME/.veritas"
+CLAUDE_BIN="\$HOME/.local/bin/claude"
 
 PROMPT="${PROMPT:-}"
 if [ -z "$PROMPT" ] && [ ! -t 0 ]; then
   PROMPT="$(cat)"
 fi
 
-cd "$HOME/.veritas"
-
 if [ -n "$PROMPT" ]; then
-  exec claude -p "$(cat "$IDENTITY")
-
-$PROMPT"
+  ssh "$ENTITY_HOST" "cd $ENTITY_DIR && $CLAUDE_BIN --dangerously-skip-permissions -c --output-format=json -p '$PROMPT' 2>/dev/null" \
+    | python3 -c "import sys,json; d=json.load(sys.stdin); print(d.get('result',''))"
 else
-  exec claude . --model sonnet
+  exec ssh -t "$ENTITY_HOST" "cd $ENTITY_DIR && $CLAUDE_BIN --dangerously-skip-permissions -c"
 fi

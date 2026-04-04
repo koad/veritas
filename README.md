@@ -1,32 +1,54 @@
-# Veritas
+# Veritas — Truth Verification
 
-> "Nothing leaves this team unverified."
-
-Veritas is a sovereign AI truth-verification entity in the [koad:io](https://kingofalldata.com) ecosystem. Every claim, announcement, product description, and research finding passes through Veritas before it reaches the world. Business credibility depends on accuracy — Veritas is the guardian.
-
-**Name origin:** Latin for "truth."
-
----
+**Entity:** veritas  
+**Role:** Fact-checking and verification officer for the koad:io ecosystem  
+**Repository:** https://github.com/koad/veritas
 
 ## What Veritas Does
 
-Every entity submits to Veritas before publishing:
+Every claim, announcement, product description, and research finding passes through Veritas before it reaches the world. Veritas does not publish — it verifies. Business credibility depends on accuracy; that is Veritas's responsibility.
 
-| Entity | What Veritas Checks |
-|--------|---------------------|
+**Name origin:** Latin for "truth."
+
+## Verification Output
+
+Every check returns one of four confidence levels:
+
+| Result | Meaning |
+|--------|---------|
+| **CONFIRMED** | Verified true, source cited |
+| **PROBABLE** | Likely true, source indirect or inferred |
+| **SPECULATIVE** | Unverified — flag for human review |
+| **FLAGGED** | Contradicts known facts — requires correction |
+
+## What Veritas Checks
+
+| Entity | Scope |
+|--------|-------|
 | Juno | Announcements and strategic claims |
 | Vulcan | Product descriptions and release notes |
-| Mercury | Social media posts with factual claims |
-| Muse | Any text in UI that makes assertions |
+| Mercury | Social posts with factual assertions |
+| Muse | Any UI text that makes a claim |
 | Sibyl | Research findings before delivery |
 
-**Every verification returns:**
-- **CONFIRMED** — verified true, source cited
-- **PROBABLE** — likely true, source indirect or inferred
-- **SPECULATIVE** — unverified, flag for human check
-- **FLAGGED** — contradicts known facts, requires correction
+## Architecture
 
----
+```
+~/.koad-io/    ← Framework layer (CLI tools, daemon)
+~/.veritas/    ← Entity layer (this repo: identity, verification workflows, memory)
+```
+
+Veritas is a sovereign entity: keys on disk, git history as the record, no cloud dependency.
+
+## Team Position
+
+```
+koad (root authority)
+  └── Juno (orchestrator)
+        └── Veritas (truth verification) ← this entity
+```
+
+All entities submit to Veritas before publishing.
 
 ## Clone This Entity
 
@@ -41,39 +63,9 @@ cd ~/.veritas && koad-io init veritas
 What you get:
 - Pre-built identity layer — memories, operational preferences, agent context
 - Verification workflow and confidence-level output format
-- Integration with the quality chain (Argus → Veritas → Salus)
+- Integration with the quality chain
 - Trust bond templates
 
----
+## More Information
 
-## Identity
-
-| | |
-|---|---|
-| **Name** | Veritas |
-| **Role** | Truth verification and fact-checking |
-| **Part of** | [koad:io](https://github.com/koad/io) ecosystem |
-| **Gestated by** | Juno (via koad-io gestate) |
-| **Email** | veritas@kingofalldata.com |
-
-## Trust Chain
-
-```
-koad (root authority)
-  └── Juno → Veritas: peer (quality assurance)
-```
-
-All entities access Veritas as a shared fact-checking service.
-
----
-
-## Ecosystem
-
-```
-koad (root)
-  └── Juno (operations)
-        └── Veritas (truth guardian) ← this entity
-```
-
-[Meet the full team →](https://github.com/koad/juno)
-[koad:io framework →](https://github.com/koad/io)
+See `CLAUDE.md` in this directory for Veritas's complete runtime instructions and operational constraints.

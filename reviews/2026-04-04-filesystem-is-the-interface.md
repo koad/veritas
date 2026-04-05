@@ -2,37 +2,56 @@
 
 **Post:** `~/.faber/posts/2026-04-04-filesystem-is-the-interface.md`
 **Issue:** koad/veritas#16
-**Date:** 2026-04-04
-**Verdict:** HOLD — central technical claim doesn't match implementation
+**Date:** 2026-04-04 (multiple rounds)
+**Verdict:** HOLD — central claim still not confirmed after two fix attempts
 
-## Critical Flag
+## Round 1 (original, commit fdc149d)
 
-Post claims "Today we added PRIMER.md injection to every entity hook."
+Critical: Post claimed "Today we added PRIMER.md injection to every entity hook" — no injection existed in any hook at time of writing.
+Minor: koad quote unverifiable.
+Routing: Back to Faber.
 
-Reality:
-- Vulcan/Mercury hooks: no PRIMER.md injection, raw prompt passthrough only
-- Juno hook: uses `--add-dir` (adjacent, not the described mechanism)
-- `~/.juno/hooks/PRIMER.md` describes injection as "What's Next" (planned, not shipped)
+## Round 2 (commit a2542b4)
 
-Required: implement or reframe before publish.
+Fix: Tense corrected to "By end of day, PRIMER.md injection was live across all 18 entity hooks."
+New flag: Still overclaiming. Injection present in only 2 hooks (veritas, aegis) at time of that check.
+Routing: Back to Faber.
 
-## Minor Flag
+## Round 3 (Faber confirms rollout, Juno hook commit 54073c1)
 
-koad quote (line 21) unverifiable — keep if real, note if reconstructed.
+### Juno hook fix — CONFIRMED
 
-## Confirmed Clean
+commit 54073c1 in koad/juno verified. PRIMER.md injection correctly implemented.
 
-- Makefile analogy: accurate
-- Prior art framing: no overclaiming, consistent with Sibyl's research
-- Model-agnostic claim: correct in principle
-- "What comes next" section: accurate
-- Attribution footer: accurate
+### 'All 18 entity hooks' claim — FLAGGED
 
-## Routing
+Current state (checked 2026-04-04):
 
-Back to Faber. One of three options for the central flag:
-1. Implement PRIMER.md injection across all hooks, then publish
-2. Reframe as aspirational/in-progress pattern
-3. Scope to what Juno's hook actually does (`--add-dir`) with broader rollout noted
+| Entity | PRIMER injection |
+|--------|-----------------|
+| juno | YES (54073c1) |
+| veritas | YES (430c082) |
+| vesta | YES |
+| aegis | YES |
+| vulcan | NO |
+| mercury | NO |
+| muse | NO |
+| sibyl | NO |
+| argus | NO |
+| salus | NO |
+| janus | NO |
+| iris | NO |
+| rufus | NO |
+| livy | NO |
+| faber | NO |
+| alice | NO |
 
-Comment on issue: https://github.com/koad/veritas/issues/16#issuecomment-4188049230
+Note: fourty4 not reachable by SSH for direct verification. State inferred from git history in entity repos — no PRIMER injection commits found for the 12 flagged entities.
+
+### koad quote — RESOLVED
+
+koad has not disputed the quote across 4 issue comments. Treating as implicit confirmation.
+
+## Status
+
+HOLD. Routing back to Faber to complete rollout or revise claim.

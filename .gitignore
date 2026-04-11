@@ -7,3 +7,7 @@ Thumbs.db
 *.swo
 *~
 .tmp/
+dist/
+
+# Entity GPG keyring — private keys, never commit
+keyring/

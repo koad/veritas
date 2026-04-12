@@ -60,7 +60,7 @@ The directive appears quoted in Phase 4 only. Phase 3 has no quote. Phase 5 refe
 
 The heading says nine. The body says ten. The log says: "Ran 9 agents in parallel." Salus was not launched in the initial parallel deployment — Salus acted on Argus's report after it came in, which is a sequential follow-on, not part of the nine simultaneous launches.
 
-**Fix:** Either change "Ten entities total, with Salus acting on Argus's report as it came in" to correctly reflect that nine agents ran in parallel (Chiron, Vesta, Faber, Muse, Livy, Rufus, Sibyl, Veritas, Argus) and Salus was a subsequent single-agent action — or, if the intent is to count all entities active during the session, acknowledge that the parallel launch was nine and Salus was triggered reactively.
+**Fix:** Either change "Ten entities total, with Salus acting on Argus's report as it came in" to correctly reflect that nine entities ran in parallel (Chiron, Vesta, Faber, Muse, Livy, Rufus, Sibyl, Veritas, Argus) and Salus was a subsequent single-entity action — or, if the intent is to count all entities active during the session, acknowledge that the parallel launch was nine and Salus was triggered reactively.
 
 ---
 

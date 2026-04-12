@@ -152,7 +152,7 @@ Each claim includes:
 
 **Claim:** "No latency from cloud round-trips"  
 **Confidence:** PROBABLE  
-**Last Verified:** 2026-02-19 (local agent testing)  
+**Last Verified:** 2026-02-19 (local entity testing)  
 **Evidence:** All operations run locally. No cloud calls required for entity operation.  
 **Notes:** Not formally benchmarked against cloud-based agents. Advantage is real but not quantified. **TODO: Run latency comparison tests before marketing as "X% faster."**
 

@@ -116,7 +116,7 @@ But 40,000× is a very specific number that requires:
 
 > "By orders of magnitude — in the same way a filesystem is better than trying to remember where you put things."
 
-This is defensible, viscerally understood, and sets up the "agent home directory" positioning without making a specific claim you can't back.
+This is defensible, viscerally understood, and sets up the "entity home directory" positioning without making a specific claim you can't back.
 
 ---
 

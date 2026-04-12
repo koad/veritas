@@ -61,7 +61,7 @@ cd ~/.veritas && koad-io init veritas
 ```
 
 What you get:
-- Pre-built identity layer — memories, operational preferences, agent context
+- Pre-built identity layer — memories, operational preferences, entity context
 - Verification workflow and confidence-level output format
 - Integration with the quality chain
 - Trust bond templates

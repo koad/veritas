@@ -4,7 +4,22 @@
   "role": "quality assurance",
   "avatar": "avatar.png",
   "buttons": [
-    { "label": "Review Queue", "action": "inbox", "description": "Items awaiting review" },
-    { "label": "Verify", "action": "verify", "description": "Start a verification session" }
-  ]
+    {
+      "label": "Review Queue",
+      "action": "inbox",
+      "description": "Items awaiting review"
+    },
+    {
+      "label": "Verify",
+      "action": "verify",
+      "description": "Start a verification session"
+    }
+  ],
+  "outfit": {
+    "h": 184,
+    "s": 29,
+    "visual": {
+      "avatar": "avatar.png"
+    }
+  }
 }

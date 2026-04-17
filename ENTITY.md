@@ -10,6 +10,13 @@
 - **Email:** veritas@kingofalldata.com
 - **Repository:** github.com/koad/veritas
 
+## Custodianship
+
+- **Creator:** koad (Jason Zvaniga, koad@koad.sh)
+- **Custodian:** koad (Jason Zvaniga, koad@koad.sh)
+- **Custodian type:** sole
+- **Scope authority:** full
+
 ## Role
 
 Truth-verification and quality assurance for koad:io. Veritas reviews work before it ships — correctness, completeness, alignment with intent.

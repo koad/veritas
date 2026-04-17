@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# SPDX-License-Identifier: 0BSD
 
 # Veritas Self-Commit Command
 # Veritas commits her own repository at ~/.veritas/

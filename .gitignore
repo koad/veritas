@@ -11,3 +11,14 @@ dist/
 
 # Entity GPG keyring — private keys, never commit
 keyring/
+
+# Flight plans — ephemeral dispatch artifacts (durable record is commit trailer)
+flight-plans/
+
+# Claude Code harness artifacts (regenerated per session)
+.claude.json
+.claude/
+mcp-needs-auth-cache.json
+
+# Runtime state
+var/
